@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* File name: TodoList.aspx.cs
+ * Author's name: Pui In Kwok
+ * Web site name: Todo List App
+ * File description: here will get all the todo from db,
+                     allow user to sort the list
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -41,7 +48,7 @@ namespace COMP2007_S2016_MidTerm
         {
             int selectedRow = e.RowIndex;
 
-            int TodoID =  = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
+            int TodoID = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
 
             using (TodoConnection db = new TodoConnection())
             {
