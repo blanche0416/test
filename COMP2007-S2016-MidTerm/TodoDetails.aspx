@@ -1,4 +1,11 @@
-﻿<%@ Page Title="Todo Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TodoDetails.aspx.cs" Inherits="COMP2007_S2016_MidTerm.TodoDetails" %>
+﻿<%--  File name: TodoDetails.aspx --%>
+<%--  Author's name: Pui In Kwok --%>
+<%--  Web site name: Todo List App --%>
+<%--  File description: This page will show todo details if it is exist,
+                        and allow user to edit details, else user
+                        can enter new todo details and save it --%>
+
+<%@ Page Title="Todo Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TodoDetails.aspx.cs" Inherits="COMP2007_S2016_MidTerm.TodoDetails" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div class="container">
          <div class="row">

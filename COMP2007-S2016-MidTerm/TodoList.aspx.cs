@@ -28,11 +28,11 @@ namespace COMP2007_S2016_MidTerm
         {
             using (TodoConnection db = new TodoConnection())
             {
-                String SortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
+                string SortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
 
                 var Todos = (from allTodos in db.Todos
                              select allTodos);
-                TodoGridView.DataSource = Todos.AsQueryable().OrderBy(SortString).ToList();
+                TodoGridView.DataSource = Todos.ToList();
                 TodoGridView.DataBind();
             }
         }
