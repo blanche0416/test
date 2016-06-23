@@ -22,7 +22,7 @@
                  </div>
                  <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover" ID="TodoGridView" 
                      AutoGenerateColumns="false" OnRowDeleting="TodoGridView_RowDeleting" DataKeyNames="TodoID" AllowPaging="true" 
-                     PageSize="3" OnPageIndexChanged="TodoGridView_PageIndexChanging" AllowSorting="true" OnSorted="TodoGirdView_Sorting" OnRowDataBound="TodoGridView_RowDataBound">
+                     PageSize="3" OnPageIndexChanged="TodoDropDownList_PageIndexChanging" AllowSorting="true" OnSorted="TodoGirdView_Sorting" OnRowDataBound="TodoGridView_RowDataBound">
                      <Columns>
                          <asp:BoundField DataField="TodoName" HeaderText="Todo" Visible="true" SortExpression="Todo" />
                          <asp:BoundField DataField="TodoNotes" HeaderText="Notes" Visible="true" SortExpression="Notes" />

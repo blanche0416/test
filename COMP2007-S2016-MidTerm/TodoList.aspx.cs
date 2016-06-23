@@ -41,7 +41,7 @@ namespace COMP2007_S2016_MidTerm
         {
             int selectedRow = e.RowIndex;
 
-            int TodoID = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
+            int TodoID =  = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
 
             using (TodoConnection db = new TodoConnection())
             {
@@ -57,7 +57,7 @@ namespace COMP2007_S2016_MidTerm
             }
         }
 
-        protected void TodoGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void TodoDropDownList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             TodoGridView.PageIndex = e.NewPageIndex;
 
