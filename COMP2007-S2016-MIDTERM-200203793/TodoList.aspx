@@ -21,7 +21,7 @@
                      <Columns>
                          <asp:BoundField DataField="TodoName" HeaderText="Todo" Visible="true" SortExpression="Todo" />
                          <asp:BoundField DataField="TodoNotes" HeaderText="Notes" Visible="true" SortExpression="Notes" />
-                         <asp:BoundField DataField="Completed" HeaderText="Completed" Visible="true" SortExpression="Completed" />
+                         <asp:CheckBoxField DataField="Completed" HeaderText="Completed" Visible="true" SortExpression="Completed" />
                          <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'><i> Edit" NavigateUrl="~/TodoDetails.aspx" 
                              ItemStyle-CssClass="btn btn-primary btn-sm" DataNavigateUrlFields="TodoID" DataNavigateUrlFormatString="TodoDetails.aspx?TodoID={0}" 
                              ControlStyle-ForeColor="White" ItemStyle-VerticalAlign="Middle" />

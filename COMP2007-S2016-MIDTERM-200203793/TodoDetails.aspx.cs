@@ -34,7 +34,14 @@ namespace COMP2007_S2016_MIDTERM_200203793
                 {
                     TodoNameTextBox.Text = updateTodo.TodoName;
                     TodoNotesTextBox.Text = updateTodo.TodoNotes;
-                    CompleteCheckBox.Checked = updateTodo.Completed;
+                    if(updateTodo.Completed == true)
+                    {
+                        CompleteCheckBox.Checked = true;
+                    }
+                    else
+                    {
+                        CompleteCheckBox.Checked = false;
+                    }
                 }
             }
         }

@@ -45,7 +45,7 @@ namespace COMP2007_S2016_MIDTERM_200203793
 
         protected void TodoGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int SelectedRow = e.RowIndex;
+            int selectedRow = e.RowIndex;
 
             int TodoID = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
 
