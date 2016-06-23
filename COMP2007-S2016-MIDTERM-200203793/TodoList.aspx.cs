@@ -39,7 +39,7 @@ namespace COMP2007_S2016_MIDTERM_200203793
                                 allTodos.Completed
                             });
                 TodoGridView.DataSource = Todos.AsQueryable().OrderBy(SortString).ToList();
-                TodoGridView.DataBinf();
+                TodoGridView.DataBind();
             }
         }
 
@@ -47,7 +47,7 @@ namespace COMP2007_S2016_MIDTERM_200203793
         {
             int SelectedRow = e.RowIndex;
 
-            int TodoID = Convert.ToInt32(TodoGridView.DataKey[SelectedRow].Values["TodoID"]);
+            int TodoID = Convert.ToInt32(TodoGridView.DataKeys[selectedRow].Values["TodoID"]);
 
             using (TodoConnection db = new TodoConnection())
             {
@@ -57,7 +57,7 @@ namespace COMP2007_S2016_MIDTERM_200203793
 
                 db.Todos.Remove(deleteTodo);
 
-                db.SaveChanes();
+                db.SaveChanges();
 
                 this.GetTodo();
             }
@@ -65,14 +65,14 @@ namespace COMP2007_S2016_MIDTERM_200203793
 
         protected void TodoGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            TodoGridView.PageIndex = e.NewPaeIndex;
+            TodoGridView.PageIndex = e.NewPageIndex;
 
             this.GetTodo();
         }
 
         protected void TodoDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TodoGridView.PageSize = Convert.ToInt32(TodoDropDownList.SelectValue);
+            TodoGridView.PageSize = Convert.ToInt32(TodoDropDownList.SelectedValue);
 
             this.GetTodo();
         }
